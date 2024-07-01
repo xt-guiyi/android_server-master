@@ -30,5 +30,7 @@ jobs:
 
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+      working-directory: ${{ github.workspace }}/ppjoke_server-master
       env:
         GITHUB_TOKEN: ${{ github.token }}
+        
